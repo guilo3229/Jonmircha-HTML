@@ -9,40 +9,327 @@
     <title>Aprendiendo HTML </title>
     <!-- description no mas de 165 caracteres es la meta descripcion lo que esta debajo de los titulos de la busqueda de google, si tenemos varias secciones de nuestro sitio web es importante darle a cada seccion una descripcion par amas profesionalidad -->
     <meta cname ="description" content ="En esta página estamos aprendiendo los fundamentos de HTML con @jonmircha">
+    <style>
+      h2{
+        color: orangered
+      }
+    </style>
+    <link rel="stylesheet" href="assets/estilos.css">
 </head>
     <body>
-        <h2>aprendiendo HTML</h2>
+        <h2 id="inicio">aprendiendo HTML</h2>
 
         <!-- mirar la configuracion y mira el pluggin prettier -->
   <p>Hola escribiendo mi primer documentoHTML</p>
   <!-- Como regla es importante tener solo un titulo de h1, porque los algoritmos de los buscadores van y revisan nuestros codigo siempre se fijan en el h1 para detectar el titulo importante de nuestro sitio(es una buena practica que solo haya un h1 por las arañas buscadoras) -->
+  <h3>Temario del curso</h3>
+  <ul>
+    <li><a href="index.html#encabezados">Encabezados HTML</a></li>
+    <li><a href="index.html#textos-basicos">Etiquetas de texto basicas</a></li>
+    <li><a href="index.html#textos-semanticos">Etiquetas de texto semánticas</a></li>
+    <li><a href="index.html#etiquetas-saltos">Etiquetas de salto</a></li>
+    <li><a href="index.html#etiquetas-formatos">Etiquetas de formateo</a></li>
+    <li><a href="index.html#etiquetas-semanticas-estructurales">Etiquetas semánticas estructurales</a></li>
+    <li><a href="index.html#etiquetas-linea-bloque">Etiquetas de linea y de bloque</a></li>
+    <li><a href="index.html#estilos-css">Estilos CSS</a></li>
+    <li><a href="index.html#scripts-html">Script en HTML</a></li>
+    <li><a href="index.html#imagenes">Imagenes</a></li>
+    <li><a href="index.html#vectores">Vectores</a></li>
+    <li><a href="index.html#figuras">Figuras</a></li>
+    <li><a href="index.html#listas-ordenadas">Listas ordenadas</a></li>
+    <li><a href="index.html#listas-desordenadas">listas desordenadas</a></li>
+    <li><a href="index.html#listas-definicion">listas de definición</a></li>
+    <li><a href="index.html#tablas">Tablas</a></li>
+    <li><a href="index.html#enlaces">Enlaces</a></li>
+    <li><a href="index.html#elementos-interactivos">Elementos interactivos</a></li>
+  </ul>
   <hr>
-  <h2>Encabezador HTML</h2>
-  <h1>Encabezado de nivel 1</h1>
+  <h2 id ="encabezados">Encabezador HTML</h2>
+  <h1>Encabezado de nivel 1 - sólo puede existir un h1 por documento html</h1>
   <h2>Encabezado de niivel 2</h2>
   <h3>Encabezado de nivel 3</h3>
   <h4>Encabezado de niivel 4</h4>
   <h5>Encabezado de nivel 5</h5>
   <h6>Encabezado de niivel 6</h6>
+  <a href="index.html#inicio">🚧</a>
   <hr>
-  <h2>Etiquetas de texto basicas</h2>
+  <h2 id="textos-basicos">Etiquetas de texto basicas</h2>
   <p>Un párrafo</p>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error aut mollitia dolores fuga accusamus pariatur numquam sequi, impedit quidem cupiditate quam earum odio cumque quo magni praesentium exercitationem labore commodi.</p>
   <p>
     Palabras en: <b>negrita</b>, <i>italica o cursiva</i>, <u>subrayado aunque es mejor con css</u> , mc<sup><small>2</small></sup>, H<sub>2</sub>O, <mark>marcatexto</mark>, <small>Letras pequeñas</small>
   </p>
+  <a href="index.html#inicio">🚧</a>
   <hr>
-  <h2>Etiquetas de texto semánticas</h2>
+  <h2 id="textos-semanticos">Etiquetas de texto semánticas</h2>
   <p>
 <!-- para dar importancia podemos usar la etiqueta Strong -->
 <strong>Este texto es imporante</strong>. <em>Este hace énfasis</em>
   </p>
   <blockquote>Yo sólo sé, que no se nada</blockquote>
   <cite>Sócrates</cite>
+  <a href="index.html#inicio">🚧</a>
   <hr>
-  <h2>etiquetas de salto</h2>
+  <h2 id = "etiquetas-saltos">etiquetas de salto</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Non, totam fuga aliquid ea illum dicta ipsum perferendis molestias quo magni qui <br><br> quas iste soluta atque assumenda cumque dolor sint debitis.
   </p>
   <hr>
+  <a href="index.html#inicio">🚧</a>
+  <h2 id ="etiquetas-formatos">Etiquetas de formateo</h2>
+  <p>
+    <pre>
+      <!-- El pre es una tarjeta de preformateo -->
+      Tareas por hacer
+        -HTML
+          -Terminar de grabar las secciones de este curso
+          -Editar en un solo video
+        -CSS
+          -Comenzar a grabar secciones css
+          -Editar un solo video
+
+
+    </pre>
+  </p>
+  <p>
+    <code>Este texto esta en formato de codigo(code)</code>
+  </p>
+  <pre>
+    <code>
+      si pego un codigo respeta la estructura
+    </code>
+  </pre>
+  <a href="index.html#inicio">🚧</a>
+  <hr>
+  <h2 id="etiquetas-semanticas-estructurales">Etiquetas semanticas estructurales</h2>
+  <div>Es una etiqueta contenedora que no tiene semántica</div>
+  <header>header - cabecera de un sitio web o de una sección</header>
+  <main>
+    main . Define la seccion principal del coumento, sólo puede existir una etiqueta main por documento
+  </main>
+  <footer>footer - Pié de página de un sitio web o de una sección</footer>
+  <nav>nav - Representa una navegación</nav>
+  <article>
+    article - Representa una seccion autocontenido(que por si sola se explica)
+  </article>
+  <aside>aside - Representa contenido complementario o secundario</aside>
+  <section>section - Representa una secccion de contenido genérico</section>
+  <address>address - Representa una información de contacto</address>
+  <a href="index.html#inicio">🚧</a>
+  <hr>
+  <h2 id="etiquetas-linea-bloque">Etiquetas de bloque VSetiquetas de línea</h2>
+  <div style = "background-color: yellow; color:red ">La eitqueta de bloque por excelencia es la div, una etiqueta de bloque es aquella que genera saltos de línea con sus etiquetas hermanas</div>
+  <span style ="background-color:greenyellow;">La etiqueta de línea de por excellencua es la span, una etiqueta de línea sólo ocupa el espacio necesario que tiene su contenido.</span>
+  <!-- En la eituqeta de linea no ocupan todo cuando le ponemos un color y permite informacion en la misma linea es decir no generan salto de linea  ni por encima ni por debajo -->
+  <span>Hola soy otra span</span>
+  <a href="index.html#inicio">🚧</a>
+  <hr>
+  <h2 id="estilos-css">Estilos CSS en HTML</h2>
+  <a href="index.html#inicio">🚧</a>
+  <hr>
+  <h2 id="scripts-html">Scripts en HTML</h2>
+  <a href="index.html#inicio">🚧</a>
+  <hr>
+  <h2 id="imagenes">imagenes</h2>
+  <!-- El alt es el texto que va a cargar si nuestra foto esta rota o no hay nada. -->
+  <!-- Los formats que aguanta la etiqueta img son :
+  1- jpg
+  2- Png
+  3-Gift
+  4-SVG -->
+  <img src="/img/foto4.svg" alt="Tabla periódica de los elementos HTML" >
+  <a href="index.html#inicio">🚧</a>
+  <hr>
+  <h2 id="vectores">SVG</h2>
+  <a href="index.html#inicio">🚧</a>
+  <hr>
+  <h2 id="figuras">Figuras</h2>
+  <figure>
+    <img src="/img/foto2.gif" alt="Tabla pikachu">
+    <figcaption>Gift pika pikachu</figcaption>
+  </figure>
+  <a href="index.html#inicio">🚧</a>
+  <hr>
+  <h2 id="listas-ordenadas">Listas Ordenadas</h2>
+  <h3>Las estaciomes del año</h3>
+  <!-- El ol te lo numera de 1 si no lo cambias hacia arriba: 1- 2- 3- 4- -->
+<ol start ="3">
+  <li>Primavera</li>
+  <li>Verano</li>
+  <li>Otoño</li>
+  <li>Invierno</li>
+</ol>
+<!-- reversed para que se invierta de mayor a menor -->
+<ol reversed start="10">
+  <li>Primavera</li>
+  <li>Verano</li>
+  <li>Otoño</li>
+  <li>Invierno</li>
+</ol>
+<ol type="I" reverse start="10">
+  <li>Primavera</li>
+  <li>Verano</li>
+  <li>Otoño</li>
+  <li>Invierno</li>
+</ol>
+<a href="index.html#inicio">🚧</a>
+<hr>
+
+<h2 id="listas-desordenadas">Listas Desordenadas</h2>
+<h3>Cosas por hacer</h3>
+<ul type = "circle">
+  <li>Terminar de grabar los fragmentos del curso de HTML</li>
+  <li>Editar el video final</li>
+  <li>subirlo a youtube</li>
+</ul>
+<ul type = "square">
+  <li>Terminar de grabar los fragmentos del curso de HTML</li>
+  <li>Editar el video final</li>
+  <li>subirlo a youtube</li>
+</ul>
+<a href="index.html#inicio">🚧</a>
+<hr>
+<h2 id="listas-definicion">Listas de definición</h2>
+<dl>
+  <dt>HTML</dt>
+  <dd>Es un lenguaje de marcado que define el contenido de la web</dd>
+  <dt>CSS</dt>
+  <dd>Es un lenguaje de definición que da estilos al código HTML</dd>
+  <dt>JavaScript</dt>
+  <dd>Es el lenguaje de la web</dd>
+</dl>
+<a href="index.html#inicio">🚧</a>
+<hr>
+<h2 id="tablas">Tablas</h2>
+<table>
+  <tr>
+    <td>Nombre</td>
+    <td>Constelación</td>
+    <td>Tipo</td>
+  </tr>
+  <tr>
+    <td>Ikki</td>
+    <td>Fénix</td>
+    <td>Bronce</td>
+  </tr>
+  <tr>
+    <td>Shaina</td>
+    <td>Ofiuco</td>
+    <td>Plata</td>
+  </tr>
+  <tr>
+    <td>Saga</td>
+    <td>Géminis</td>
+    <td>Dorado</td>
+  </tr>
+</table>
+  <hr>
+  <hr>
+  
+<table>
+  <thead> 
+    <tr>
+      <th colspan="3">Tabla de los Santos de Athenas</th>
+    </tr>
+<tr>
+  <th>Nombre</th>
+  <th>Constelación</th>
+  <th>Tipo</th>
+</tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td >Ikki</td>
+      <td>Fénix</td>
+      <td>Bronce</td>
+    </tr>
+    <tr>
+      <td>Mistry</td>
+      <td>lagarto</td>
+      <td>Plata</td>
+    </tr>
+    <tr>
+      <td>Saga</td>
+      <td>Géminis</td>
+      <td>Dorado</td>
+    </tr>
+    <tr>
+      <td>Shaina</td>
+      <td rowspan="2">Ofiuco</td>
+      <td>Plata</td>
+    </tr>
+    <tr>
+      <td>Odiseo</td>
+ 
+      <td>Dorado</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr colspan="3">
+      <small> Saint Seyia fue creado por masmi Kurumara</small>
+    
+    </tr>
+
+  </tfoot>
+</table>
+<a href="index.html#inicio">🚧</a>
+<hr>
+<h2 id="enlaces">Enlaces</h2>
+<a href="hola.html">Hacia la pagina hola</a>
+
+<hr>
+<a href="https://jonmircha.com" target="_blank" rel="nofollow">Visita mi sitio web jonMircha.com</a>
+<hr>
+<a href="https://jonmircha.com" target="_blank">
+  <img src="img/foto2.gif" alt="Ir hacia mis cursos" width="100" height="100">
+</a>
+<br>
+<!-- DEtecta si tiene la app de gmail y te la harbe con dicho correo esto en un dispositivo movil funciona -->
+<a href="mailto:juanpablotorresperezuni@gmail.com">Enlace a correo electrónico</a>
+<br>
+<a href="tel:159753159">Enlace a telefono</a>
+<br>
+<a href="https://api.whatsapp.com/send?phone=123123234&text=Hola">Enlace hacia whasp</a>
+<br>
+<a href="index.html#inicio">🚧</a>
+<hr>
+<h2 id="elementos-interactivos">Elmentos interactivos</h2>
+
+<button onclick="alert('Hola has clickado el botón')">Este es un botón</button>
+<br>
+<details>
+  <summary>Titulo del Acordeón</summary>
+  <article>
+    <h3>Contenido del Acordeón</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At facilis qui quo enim ducimus ipsam cum ad, iure nihil! Et doloribus adipisci impedit unde quasi quaerat totam officiis explicabo aliquam?</p>
+    <img src="img/foto4.svg" alt="vector">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At facilis qui quo enim ducimus ipsam cum ad, iure nihil! Et doloribus adipisci impedit unde quasi quaerat totam officiis explicabo aliquam?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At facilis qui quo enim ducimus ipsam cum ad, iure nihil! Et doloribus adipisci impedit unde quasi quaerat totam officiis explicabo aliquam?</p>
+  </article>
+</details>
+<br>
+<details open>
+  <summary>Titulo del Acordeón</summary>
+  <article>
+    <h3>Contenido del Acordeón</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At facilis qui quo enim ducimus ipsam cum ad, iure nihil! Et doloribus adipisci impedit unde quasi quaerat totam officiis explicabo aliquam?</p>
+    <img src="img/foto4.svg" alt="vector">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At facilis qui quo enim ducimus ipsam cum ad, iure nihil! Et doloribus adipisci impedit unde quasi quaerat totam officiis explicabo aliquam?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At facilis qui quo enim ducimus ipsam cum ad, iure nihil! Et doloribus adipisci impedit unde quasi quaerat totam officiis explicabo aliquam?</p>
+  </article>
+</details>
+
+<br>
+<dialog open>
+  Esto es una ventana modal en HTML
+</dialog>
+
+<br>
+<a href="index.html#inicio">🚧</a>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <script>
+    console.log("Hola estamos aprendiendo HTML")
+  </script>
+  <script src="assets/codigos.js"></script>
     </body>
 </html>
