@@ -6,9 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- - 55 y 65 caracteres -->
-    <title>Aprendiendo HTML </title>
+    <title>Aprendiendo HTML</title>
     <!-- description no mas de 165 caracteres es la meta descripcion lo que esta debajo de los titulos de la busqueda de google, si tenemos varias secciones de nuestro sitio web es importante darle a cada seccion una descripcion par amas profesionalidad -->
     <meta cname ="description" content ="En esta página estamos aprendiendo los fundamentos de HTML con @jonmircha">
+    <link rel="canonical" href="http://tudominio.com/la-url-canonica">
+    <!-- Que es un url canonica te mete un codigo por ejemplo  de  descuento u, en plan una url con descuento dentro y son diferentes url para los buscadores y la url canonica es la que dice que para lelgar al contenido url esta es la autentica la principal la autentica esa es la canónica -->
+
+    <!-- el icon es para el ordenador la imagen que sale arriaba a la izquierda -->
+    <link rel="icon" href="/img/fabicon.png">
+    <!-- el apple touch icon es para los moviles para ver la figurita de la pagina -->
+    <link rel="apple-touch-icon" href="/img/fabicon.png">
+    <meta name="theme-color" content="#FF6600">
+    <meta property="og:title" content="Aprendiendo HTML">
+    <!-- luego cuando sepas cual es la ruta de tu dominito en content hay que poner tu dominio/img/(nombre de foto) -->
+    <meta property="og:descripcion" content="En esta página estamos aprendiendo los fundamentos de HTML con @jonmircha">
+    <meta property="og:image" content="img/foto3.png">
+    <meta property="og:url" content="https://tudominio.com/index.html">
+    <meta name="twwiter:card" content="summary">
+    <meta name="twitter:side" content="(tu twittwer)">
     <style>
       h2{
         color: orangered
@@ -45,6 +60,10 @@
     <li><a href="index.html#audio-video">Audio y video</a></li>
     <li><a href="index.html#iframe">Iframe</a></li>
     <li><a href="index.html#formularios">formularios</a></li>
+    <li><a href="index.html#select-radio-checkbox">select, Radios y checkbox</a></li>
+    <li><a href="index.html#formulario-contacto">Formulario de contacto</a></li>
+    <li><a href="index.html#data-attributes">Data Attributes</a></li>
+    <li><a href="index.html#metas-seo">metaetiquetas para el SEO</a></li>
   </ul>
   <hr>
   <h2 id ="encabezados">Encabezador HTML</h2>
@@ -428,7 +447,106 @@
 </form>
 <a href="index.html#inicio">🚧</a>
 <hr>
-<h2></h2>
+<h2 id="select-radio-checkbox">Selects,Radios y checkbox</h2>
+
+<form action="">
+<p>Elige tu idioma:</p>
+<select name="idioma" required >
+<option value="">Elige una opcion</option>
+<option value="es">Español</option>
+<option value="en">ingles</option>
+<option value="fr">Frances</option>
+<option value="it">Italiano</option>
+<option value="pt">Portugues</option>
+
+</select>
+<p>Elige tu lenguaje de programacion favorito</p>
+<input type="radio" name="lenguaje" id="radio-js" value="Js" required>
+<!-- El atributo required es suficiente en 1 de las opciones con el mismo name si es diferente no funciona -->
+<label for="radio-js">JS</label>
+<input type="radio" name="lenguaje" id="radio-py" value="py">
+<label for="radio-js">PHYTON</label>
+<input type="radio" name="lenguaje" id="radio-php" value="php" >
+<label for="radio-js">PHP</label>
+<!-- <input type="text">
+<input type="text"> -->
+
+<p>Elige tus intereses</p>
+<!-- si el input esta dentro de las etiquetas no ahce falta el id para asociarlos como en el caso de arriba -->
+<label >
+  <input type="checkbox" name="intereses-deportes" value="deportes">
+  Deportes
+</label>
+<label >
+  <input type="checkbox" name="intereses-finanzas" value="finanzas">
+  Finanzas
+</label>
+<label >
+  <input type="checkbox" name="intereses-salud" value="salud">
+  salud
+</label>
+<label >
+  <input type="checkbox" name="interesespolitica" value="politica">
+  política
+</label>
+<label >
+  <input type="checkbox" name="intereses-ecologia" value="ecologia">
+  ecología
+</label>
+
+<p>
+  <label >
+    <input type="checkbox" name="terminos" required>
+    ¿Aceptas terminos y condiciones?
+  </label>
+</p>
+<input type="submit">
+<input type="reset">
+
+<!-- http://127.0.0.1:5500/index.html?idioma=en&lenguaje=py&intereses=finanzas&intereses=salud#select-radio-checkbox -->
+</form>
+<!-- http://127.0.0.1:5500/index.html?idioma=en#select-radio-checkbox -->
+<!-- Para multiple: http://127.0.0.1:5500/index.html?idioma=es&idioma=en&idioma=fr#select-radio-checkbox -->
+<!-- http://127.0.0.1:5500/index.html?idioma=es&lenguaje=on#select-radio-checkbox -->
+<!-- El atributo name tiene que ser exactamente igual en los tres psi queremos elegir 1 para que se quite y se ponga el nuevo -->
+<!-- http://127.0.0.1:5500/index.html?idioma=es&lenguaje=py#select-radio-checkbox -->
+<!-- Como podemos ver funciona en ambos casos ya sea poniendo el mismo name como que no , cambiarles el name sirve para si copiamos la url podamos ver cada cosa mas facilmente observar la parte  -->
+<!-- http://127.0.0.1:5500/index.html?idioma=es&lenguaje=Js&intereses-deportes=deportes&intereses-finanzas=finanzas&intereses-salud=salud&interesespolitica=politica&intereses-ecologia=ecologia#select-radio-checkbox, es mejor al final dejarlo con el mismo nombre porque si son muchos se lia mucho-->
+<!-- Respecto a checked puedes poner varios al contrario que  los selects y radios -->
+
+<a href="index.html#inicio">🚧</a>
+<hr>
+<h2 id="formulario-contacto">Formulario de Contacto</h2>
+
+<form action="https://formsubmit.co/your@email.com" method="POST">
+<input type="text"name="nombre" placeholder="Escribe tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="nombre solo acepta letras y espacios en blanco" required>
+<br>
+<input type="email" name="correo" placeholder="Escribe tu correo" pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" title="Formato de correo inválido" required>
+<br>
+<textarea name="comentarios"  cols="30" rows="10" required></textarea>
+<br>
+<input type="submit">
+</form>
+
+
+<a href="index.html#inicio">🚧</a>
+<hr>
+<h2 id="data-attributes">Data Attributes</h2>
+<ul>
+  <li data-id ="1" data-name="spring">Primavera</li>
+  <li data-id ="2" data-name="summer">Verano</li>
+  <li data-id ="3" data-name="autumn">Otoño</li>
+  <li data-id ="4" data-name="winter">Invierno</li>
+</ul>
+
+
+<a href="index.html#inicio">🚧</a>
+<hr>
+<h2 id="metas-seo">Metaetiquetas para SEO</h2>
+
+<a href="index.html#inicio">🚧</a>
+<hr>
+
 
 
 <a href="index.html#inicio">🚧</a>
