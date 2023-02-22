@@ -13,10 +13,11 @@ h1{
 img,video{
 
     max-width: 100%;
+    /* El height auto significa que recalcule su alturarespecto a la anchura y asi sea proporcional */
     height: auto;
 }
 
 iframe{
-    width:50%;
+    width:80%;
     height:400px
 }
